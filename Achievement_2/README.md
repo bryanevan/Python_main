@@ -7,6 +7,7 @@
 3. [Exercise 3](#exercise-3)
 4. [Exercise 4](#exercise-4)
 5. [Exercise 5](#exercise-5)
+6. [Exercise 6](#exercise-6)
 
 # Exercise 1
 
@@ -154,3 +155,47 @@ Create recipes_details.html to display recipe details.
 ## Test
 
 Test all links and ensure they pass.
+
+# Exercise 6
+
+## Table of Contents
+
+1. [Provide Authentication](#provide-authentication)
+2. [Protect Views](#protect-views)
+3. [Implement Logout](#implement-logout)
+4. [Run Server and Capture Output](#run-server-and-capture-output)
+
+## Provide authentication
+
+Create a login feature for your application. The login page should be accessible from your homepage via the link directly at “http://127.0.0.1:8000/login/”. To achieve this, you need to:
+Create a login view.
+Create a login template.
+Register a view and map URL.
+Provide a clickable login link or button on the homepage that routes to the authentication form.
+Identify which page you want to protect via authentication and redirect the user to that page after a successful login.
+
+## Protect Views
+
+Identify which views or pages you want to protect via authentication. Then go ahead and add the necessary code at all relevant views to ensure that the page isn’t called if the user isn’t logged in. Access the URLs of the protected views in your browser and make sure that you’re redirected to the login page.
+
+## Implement Logout
+
+Provide a logout link or button on each protected page.
+Create a new view and template for your application with the message “You’ve successfully logged out.” Call this success.html.
+Provide a link to log back in to success.html.
+Create the view and template for logging out.
+What other information or feature do you want to place on the success.html page? Go ahead and add it to the template. Be creative!
+
+## Run Server and Capture Output:
+
+Toggle the terminal ON in VSCode and follow the steps to run the server:
+Navigate to A2_Recipe_App/src.
+Activate the virtual environment: a2-ve-recipeapp.
+Execute runserver.
+Head to the browser and follow a typical user journey:
+User lands at homepage.
+User clicks login button.
+Authentication form is shown.
+User enters username and password.
+Information is authenticated and user is redirected to sales page.
+User logs out and returns to successful logout page.
