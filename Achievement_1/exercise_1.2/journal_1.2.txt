@@ -1,0 +1,37 @@
+###Exercise 1.2: Data Types in Python
+Learning Goals
+
+	•	Explain variables and data types in Python
+	•	Summarize the use of objects in Python
+	•	Create a data structure for your Recipe app
+
+Reflection Questions
+		Imagine you’re having a conversation with a future colleague about whether to use the iPython Shell instead of Python’s default shell. What reasons would you give to explain the benefits of using the iPython Shell over the default one?
+		- I really like the output formatting. I’ve used it in the past to display images, plots, text, and large dataframes for analysis; so, generally speaking it really speeds up the process for whatever task you have.
+		- One of the best tools out there is Jupyter Notebook, which has been a lifesaver for working with large data sets. I can’t imagine not having it while mining or doing other exploratory tasks.
+	
+    Python has a host of different data types that allow you to store and organize information. List 4 examples of data types that Python recognizes, briefly define them, and indicate whether they are scalar or non-scalar.
+Data:
+Definition:
+Scalar or Non-Scalar:
+
+- Integer (int)
+- Whole numbers only
+- Scalar
+
+- Float (float)
+- Whole or fractional numbers; decimals
+- Scalar
+
+- String (str)
+- Words, numbers, symbols, whitespace; textual data
+- Non-Scalar
+
+- List
+- Collections of items from all data types; mutable
+- Non-Scalar
+
+	A frequent question at job interviews for Python developers is: what is the difference between lists and tuples in Python? Write down how you would respond.
+		Tuples are data meant to be immutable, created with x=(), where lists are mutable and created with x=[]. Tuples are like one whole item within the variable, where a list includes multiple items within the variable; thus, a list can use expressions like append(), remove(), pop().
+		In the task for this Exercise, you decided what you thought was the most suitable data structure for storing all the information for a recipe. Now, imagine you’re creating a language-learning app that helps users memorize vocabulary through flashcards. Users can input vocabulary words, definitions, and their category (noun, verb, etc.) into the flashcards. They can then quiz themselves by flipping through the flashcards. Think about the necessary data types and what would be the most suitable data structure for this language-learning app. Between tuples, lists, and dictionaries, which would you choose? Think about their respective advantages and limitations, and where flexibility might be useful if you were to continue developing the language-learning app beyond vocabulary memorization. 
+		For sure dictionaries; it’s the perfect structure for organizing the data that would go into each flashcard under categories of the creator’s choosing. This way the data will be nested and grouped with other relevant and similar data.

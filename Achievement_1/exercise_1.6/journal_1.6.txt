@@ -1,0 +1,52 @@
+### Exercise 1.6: Connecting to Databases in Python
+
+Learning Goals
+
+- Create a MySQL database for your Recipe app
+
+Reflection Questions
+
+- What are databases and what are the advantages of using them?
+
+Databases are simply data storage mechanisms to house, retrieve, and change data that is..stored 
+there. The advantages are numerous, but primarily data persistence in a structured manner by using 
+relational or non-relational methods. Another big one is security, as encryption techniques to 
+restrict access to, and hide, sensitive data is always ideal. It also provides a means of backing 
+up fallen systems, so long as the database remains uncorrupted. Also, databases serve as access 
+points through which API are built to manage and retrieve information, such that we can built 
+software that becomes useful to the end user.
+
+- List 3 data types that can be used in MySQL and describe them briefly:
+
+| Data type | Definition |
+| --- | --- |
+| INT | + or - numbers |
+| VARCHAR | character length, alphanumeric |
+| DATE | YYYY-MM-DD |
+- In what situations would SQLite be a better choice than MySQL?
+
+SQLite is best for projects that need to prioritize simplicity and low volume transaction rates, 
+local storage. It operates entirely within the application (serverless) so it’s pretty useful for 
+testing or learning purposes. 
+
+- Think back to what you learned in the Immersion course. What do you think about the differences 
+between JavaScript and Python as programming languages?
+
+The biggest difference that stands out to me is JS was built, and is maintained, for web dev; where 
+python seems to have a higher variance of use cases. Over the last 8 years or so Python has become 
+very popular in data science, machine learning, automation, and data analysis, given Python’s myriad 
+of libraries that pertain to that domain. Python crosses into web dev domain via Django and Flask, 
+primarily, but it doesn’t have anywhere near the same marketshare as JS for client-side. Python 
+always stands out as a more readable language, given its more simplistic syntax and lower learning 
+curve.
+
+- Now that you’re nearly at the end of Achievement 1, consider what you know about Python so far. 
+What would you say are the limitations of Python as a programming language?
+
+Just from what I’ve experienced in working with Python in past jobs, it’s incredibly useful for a
+data science and analytics application because it has pretty powerful libraries to draw from: 
+NumPy, pandas, scikit-learn, matplotlib, and supporting environments like JupyterNotebook and 
+JupyterLab; however, I haven’t seen much of it on client-side due to a lack in variance of 
+libraries and frameworks for client-side applications. Maybe the biggest factor is that Python isn’t 
+inherently designed for web browsers, so Python requires a fair bit of support from additional tools 
+just to operate to expectations, which will add complexity.

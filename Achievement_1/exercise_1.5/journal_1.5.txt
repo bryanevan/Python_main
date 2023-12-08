@@ -1,0 +1,75 @@
+**Learning Goals**
+
+•	Apply object-oriented programming concepts to your Recipe app
+
+**Reflection Questions:**
+
+•	In your own words, what is object-oriented programming? What are the benefits of OOP?
+
+I tend to think of it as a manner of approaching a problem and partitioning that problem into blocks 
+that are meant to communicate with each other to create a cohesive final result (software); moreover, 
+these blocks can share classes and functions with each other, and from those new ones can be created 
+to suit a particular need. As for benefits, the standout is definitely organization and 
+maintainability of the software, especially when a project starts to scale. The best thing is that 
+existing foundational classes, functions and structures can be re-used, at scale.
+
+•	What are objects and classes in Python? Come up with a real-world example to illustrate how 
+objects and classes work.
+
+Classes are the blueprints, foundational structure, templates upon which objects are iterated off of. 
+We’ll use Tesla Motor’s approach to production as an example. There are only two different chassis 
+they produce to make all of their vehicles; these are their “classes”. All their models are built on 
+top of either the big chassis, or the little chassis. So the Model X, for example, is an “object” of 
+the big chassis class; and the Model 3 is an object of the small chassis, and so on; moreover, each 
+Model can then be iterated even further with variance in colors and add ons, much like the development 
+of an object taking deeper iterative forms of their parent class.
+
+•	In your own words, write brief explanations of the following OOP concepts; 100 to 200 words per 
+method is fine.
+
+Inheritance: 
+
+Creating a new class from a “parent” class. The derived class takes on all the attributes and 
+behaviors of its parent, but with the added bonus of being able to carry new features. Kind of like 
+updating the class to a new version, if you want. But this basically lets us extend functionality 
+from an existing class without having to duplicate code. 
+
+One way this is pretty useful is for creating specialized classes for a part of a program. Generally 
+speaking this approach keeps everything nice a tidy because it helps maintain basic structure across 
+the codebase; moreover, it helps reduce copying and pasting of code from one class to another, which 
+is always great when considering maintenance and potential bugs.
+
+Polymorphism:
+
+This is referring to the ability of different object to respond to the same method or function call 
+in their own unique way. There’s two main types of this. 
+
+First, there’s method overloading (static), where multiple methods or functions with the same name, 
+but different parameter types or numbers, are defined at the time of compilation: compile-time 
+polymorphism. 
+
+Second, is method overriding (dynamic), where a base class and a derived class provide their own 
+implementation for a method that is already defined in the base class; the method in the derived 
+class overrides the method with the same name in the base class.
+
+Polymorphism allows you to treat objects of different classes as if they were objects of a common 
+superclass, promoting flexibility and abstraction in your code.
+
+Operator Overloading:
+
+This is where you take the basic operators (+, -, /, =, etc) and define new behaviors for them in 
+custom classes. So when they’re invoked with objects, the operators will perform the new behavior it 
+was set to. 
+
+This is very useful because we can use these custom operators to perform a behavior that is 
+intuitively meaningful for a custom class. One example of this is taking something like a “Time” 
+class and overloading ‘+’ so that it adds two time instances together. This would replace the need 
+to name and define a method like ‘add_time’; thus, reducing overall code bulk because we can just use 
+these overloaded operators instead a slew of method names to achieve the same purpose; which adds to 
+the simplicity of the codebase.
+
+There’s also a great sense of control over semantics. If we define and enforce behaviors for how 
+objects interact with operators, we can help prevent unintended or nonsensical operations. So we’re 
+creating a new convention within the custom class such that, an operator must interact with an object 
+in a manner which we can now expect. This kind of enforcement of behaviors can be useful for 
+safeguarding object and operator interaction.

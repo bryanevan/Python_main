@@ -1,0 +1,62 @@
+### Exercise 2.1: Getting Started with Django
+
+Learning Goals
+
+- Explain MVT architecture and compare it with MVC
+- Summarize Django’s benefits and drawbacks
+- Install and get started with Django
+
+Reflection Questions
+
+- Suppose you’re a web developer in a company and need to decide if you’ll use vanilla (plain) Python 
+for a project, or a framework like Django instead. What are the advantages and drawbacks of each?
+
+Vanilla is great for smaller projects that are going to be lightweight. It’s also better if the dev 
+team isn’t as experienced with python. Performance is going to be better in vanilla also, given it’s 
+not being weighed down by the size of a heavy framework like Django. 
+
+One big drawback to going vanilla for a build is having to build web apps from scratch often means 
+reinventing commonly found web dev components like routing, authentication, and database integration, 
+which is really time consuming and can have loads of errors. The maintenance on this beat is going to 
+be pretty hefty also. This also means that he overall time for the build might be considerably longer 
+than if we went with a framework.
+
+Django would be advantageous if we want to build fast, and have conventions in place for when the app 
+scales and needs maintenance. It also provides a layer of security inherent to the framework. 
+Generally, this would make the build quicker, easier, and more organized.
+
+Drawbacks could be in the learning curve of our dev team, assuming they’re not well versed in python. 
+Frameworks are less flexible than vanilla python, so certain built-in structures and conventions might 
+cause some friction with future ideas or needs that the we want to put into the app. If the project 
+is simple, then something like Django is overkill, so I wouldn’t recommend it if the app we’re building 
+is pretty small in general.
+
+- In your own words, what is the most significant advantage of Model View Template (MVT) architecture 
+over Model View Controller (MVC) architecture?
+
+The templates are the big focus here, and the major advantage that MVT has over MVC. The templates 
+define the UI and handles how data is rendered within the view, so it keeps the presentation logic 
+separate from the view. This is great because is makes it possible for designers to work on the 
+templates without needing to delve into the applications’s logic, while devs can focus on implementing 
+the backend without getting bogged down in frontend details.
+
+- Now that you’ve had an introduction to the Django framework, write down three goals you have for 
+yourself and your learning process during this Achievement. You can reflect on the following questions 
+if it helps:
+- What do you want to learn about Django?
+
+I want to see what the use cases are outside of the ones we’ve covered so far. It sounds like there’s 
+a lot of opportunity to apply it to software that is meant to scale and can be great for bringing 
+something in the B2C space to market.
+
+- What do you want to get out of this Achievement?
+
+I want to be proficient in Python and Django as it applies to web development. Everything else I pick 
+up along the way is bonus.
+
+- Where or what do you see yourself working on after you complete this Achievement?
+
+That’s pretty hard to answer. I’d like to think I know what the next chapter will look like but life 
+is very unexpected. In Hawaii, there’s a fair bit of opportunity for developers in the health industry, 
+so I can see myself entering that space as a developer. As for side projects, I think it would be cool 
+to build something like Pinterest but niched down perhaps.

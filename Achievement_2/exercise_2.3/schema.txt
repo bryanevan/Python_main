@@ -1,0 +1,53 @@
+             +---------------------+
+             |      User           |
+             +---------------------+
+             | id                  |
+             | username            |
+             | password            |
+             +---------------------+
+                    |
+                    |
+                    |
+             +---------------------+
+             |     Recipe          |
+             +---------------------+
+             | id                  |
+             | title               |
+             | cooking_time        |
+             | difficulty          |
+             +---------------------+
+                    |
+                    |
+                    |
+             +---------------------+
+             |   Ingredient        |
+             +---------------------+
+             | id                  |
+             | name                |
+             +---------------------+
+                    |
+                    |
+                    |
+             +---------------------+
+             |   RecipeIngredient  |
+             +---------------------+
+             | id                  |
+             | recipe_id           |
+             | ingredient_id       |
+             +---------------------+
+
+
+The application has the following entities:
+
+User entity representing the users of the application. It has attributes: id, username, and 
+password for authentication and authorization purposes.
+
+The Recipe entity represents the individual recipes. It has attributes: id, title, cooking_time,
+and difficulty. The difficulty attribute will be automatically calculated by the application.
+
+The Ingredient entity represents the ingredients used in the recipes. It has attributes: id and 
+name.
+
+There is a many-to-many relationship between the Recipe and Ingredient entities, which is represented 
+by the RecipeIngredient entity. It has attributes: id, recipe_id, and ingredient_id to establish 
+the relationship between a recipe and its ingredients.

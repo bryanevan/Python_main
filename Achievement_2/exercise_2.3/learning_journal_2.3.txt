@@ -1,0 +1,32 @@
+### Exercise 2.3: Django Models
+
+Learning Goals
+
+- Discuss Django models, the “M” part of Django’s MVT architecture
+- Create apps and models representing different parts of your web application
+- Write and run automated tests
+
+Reflection Questions
+
+- Do some research on Django models. In your own words, write down how Django models work and what 
+their benefits are.
+    - Django simplifies the interaction between application and database by defining the structure 
+    of the database tables and how data is stored, retrieved, and manipulated. These structures are 
+    then migrated, where Django creates SQL statements to create or alter database tables. 
+    the benefits of using models are plentiful. One I think is pretty cool is automatic schema 
+    evolution; this is where the migration system automates the process of evolving the database 
+    schema as the application evolves. This ensures that the databases structure stays synchronized 
+    with the application’s data model. Another is code reusability. Once defined, models can be a 
+    ready-made interface for managing database content during development. One more is Django Admin 
+    site and how the models integrate into this site, providing the dev with an interface through 
+    which he can manage content of the database throughout development. There’s plenty more, but 
+    these are the ones that stood out to me.
+- In your own words, explain why it is crucial to write test cases from the beginning of a project. 
+You can take an example project to explain your answer.
+    - Models are the backbone of a Django App so writing tests means catching missteps early on. 
+    Django makes it easy because it provides an awesome testing framework so when the model and 
+    database interact the framework will make sure the updating, creating, and deleting of data is 
+    being performed without any unwanted side effects. So it makes sense to build test cases from 
+    the very beginning so that as the models develop, grow, refactor, or anything of the sort, we 
+    know that the communication and end results between databases and models are not causing any 
+    issues.

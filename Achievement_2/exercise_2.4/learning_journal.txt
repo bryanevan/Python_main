@@ -1,0 +1,133 @@
+### Exercise 2.4: Django Views and Templates
+
+Learning Goals
+
+- Summarize the process of creating views, templates, and URLs
+- Explain how the “V” and “T” parts of MVT architecture work
+- Create a frontend page for your web application
+
+Reflection Questions
+
+- Do some research on Django views. In your own words, use an example to explain how Django views work.
+    - Django views act as glue between the data(models) and the presentation(templates). they process user requests, 
+    fetch or manipulate data as needed, and then pass it to a template fir rendering. This separation of concerns 
+    follow the Mode-View-Controller (MVC) pattern, where views handle the presentation logic.
+        
+        Suppose we want to build a blog. We have a model in models.py for blog posts and we want to present a list 
+        of blog posts to the user. We make sure the urls will lead the user to a page displaying this information, 
+        so update [urls.py](http://urls.py) to do so. We create a view function in [views.py](http://views.py) that 
+        retrieves all blog posts from the database and passes them to a template for rendering. The template is in a 
+        separate directory but will house our .html file where all blog posts will display. Thus, when the user 
+        navigates to the url specified in the parameters set in views.py and urls.py, the view function we created in 
+        views.py will be triggered, passing the blog post data to the .html template. The template dynamically 
+        generates HTML, incorporating the blog posts.
+        
+- Imagine you’re working on a Django web development project, and you anticipate that you’ll have to reuse lots of 
+code in various parts of the project. In this scenario, will you use Django function-based views or class-based 
+views, and why?
+    - For sure we’re going with CBV method because creating class-based-views gives us the benefit of the modularity 
+    of the CBV method. This will inherently reduce the re-use of code and speed up production. If we want, we can 
+    even use built-in generic Django provided views that encapsulate common patterns. Since this is web dev, we’re 
+    definitely going to be calling data from an API, so the CBV really helps us maintain the DRY methodology given 
+    CBV naturally handles HTTP methods - FBV does not have this feature. CBV is also more effectively integrated 
+    with Django’s URL routing using the ‘as_view()’ method, making for cleaner and more maintainable URL configs.
+- Read Django’s documentation on the Django template language and make some notes on its basics.
+    
+    ### **Django Template Language Basics:**
+    
+    **Syntax:**
+    
+    - Django templates use double curly braces **`{{ }}`** for outputting variables and curly braces with a percent 
+    sign **`{% %}`** for template tags and control structures.
+    
+    **Variables:**
+    
+    - Variables enclosed in double curly braces are used to output dynamic content. For example:
+        
+        <p>Hello, {{ user.username }}!</p>
+        
+        
+    
+    **Template Tags:**
+    
+    - Template tags provide control flow and logic within templates. They are enclosed in curly braces with percent 
+    signs. For example, a simple **`if`** statement:
+        
+        {% if user.is_authenticated %}
+            <p>Welcome, {{ user.username }}!</p>
+        {% else %}
+            <p>Please log in.</p>
+        {% endif %}
+        
+        
+    
+    **Filters:**
+    
+    - Filters can be applied to variables to modify their output. Filters are separated by the pipe symbol (**`|`**). 
+    For example:
+        
+        <p>{{ some_text|lower }}</p>
+        
+        
+    
+    **Template Inheritance:**
+    
+    - Django supports template inheritance, allowing you to create a base template with common structure and 
+    placeholders for content that can be overridden by child templates. This promotes code reusability. For example:
+        
+        <!-- base_template.html -->
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>{% block title %}Default Title{% endblock %}</title>
+        </head>
+        <body>
+            {% block content %}{% endblock %}
+        </body>
+        </html>
+        
+        
+        <!-- child_template.html -->
+        {% extends 'base_template.html' %}
+        
+        {% block title %}Custom Title{% endblock %}
+        
+        {% block content %}
+            <p>This is the content of the child template.</p>
+        {% endblock %}
+        
+        
+    
+    **Loops:**
+    
+    - Django templates support loops using the **`{% for %}`** and **`{% endfor %}`** tags. For example:
+        
+        <ul>
+        {% for item in items %}
+            <li>{{ item }}</li>
+        {% endfor %}
+        </ul>
+        
+        
+    
+    **Comments:**
+    
+    - Comments in Django templates are enclosed in **`{# #}`**. For example:
+        
+        {# This is a comment #}
+        
+        
+    
+    **Static Files:**
+    
+    - To include static files (e.g., CSS, JavaScript), you can use the **`{% load static %}`** tag and reference 
+    static files with the **`{% static %}`** tag. For example:
+        
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        
+        
+    
+    These are some of the fundamental aspects of the Django template language. Django's template engine provides a 
+    powerful and concise way to generate HTML dynamically, and the documentation goes into much greater detail on 
+    these concepts and more.

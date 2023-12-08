@@ -1,0 +1,49 @@
+Exercise 1.4: File Handling in Python
+
+**Learning Goals**
+
+•	Use files to store and retrieve data in Python
+
+**Reflection Questions:**
+
+Why is file storage important when you’re using Python? What would happen if you didn’t store 
+local files?
+
+File storage in Python is like keeping your stuff in a virtual locker. It's important because it
+lets you save data even after your program stops running. Since the data is stored on local, it
+can be used for different programs. Without file storage all data would be lost after programs
+are finished running.
+
+In this Exercise you learned about the pickling process with the **pickle.dump()** method. What 
+are pickles? In which situations would you choose to use pickles and why?
+
+Pickling is taking python script and converting it into a byte stream; the inverse is “unpickling.” 
+It’s a pretty effective technique for taking something like a machine learning model, exporting it 
+into a binary file format, then invoking it in another program. It’s also great for compressing 
+massive datasets.
+
+In Python, what function do you use to find out which directory you’re currently in? What if you 
+wanted to change your current working directory?
+
+Current working dir - os.getcwd()
+
+Change dir - os.chdir()
+
+Imagine you’re working on a Python script and are worried there may be an error in a block of 
+code. How would you approach the situation to prevent the entire script from terminating due to 
+an error?
+
+You could wrap the whole questionable block of code in a try-except block to partition segments 
+of the block into items that can be individually assessed.
+
+You’re now more than halfway through Achievement 1! Take a moment to reflect on your learning in 
+the course so far. How is it going? What’s something you’re proud of so far? Is there something 
+you’re struggling with? What do you need more practice with? Feel free to use these notes to guide 
+your next mentor call.
+
+Going well so far. I’ve always liked working with Python but it’s been a couple of years so I’m 
+noticing some things I’ve forgotten in that time. The deeper I go into the coursework, the more 
+my memory is coming back as well; definitely proud of that. I wouldn’t say there’s anything that’s 
+a struggle at this stage, it’s just a matter of repetition and spending quality time in the 
+language. I would like to practice the applications of lambda functions, I remember those came in 
+pretty handy in the past but can’t remember much about them.

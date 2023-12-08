@@ -1,0 +1,77 @@
+### Exercise 2.6: User Authentication in Django
+
+Learning Goals
+
+- Create authentication for your web application
+- Use GET and POST methods
+- Password protect your web application’s views
+
+Reflection Questions
+
+- In your own words, write down the importance of incorporating authentication into an application. 
+You can take an example application to explain your answer.
+
+First thing that comes to mind is the user experience. Assuming my application grows to a state where
+the user will influence what is displayed, and the application supports dynamic rendering, the user
+will expect to see data they have previously interacted with or make selection of. This would look 
+something like the user selecting certain recipes that they would like to save in their profile for
+later reference. The authentication layer will make it possible for each user to have a unique experience
+given they will be able to save recipes to their indiividual user-account. 
+
+Another thing that comes to mind is the analytics available to the developer. We can extract useful user
+data and behaviours from their individual and collective interactions with the applications and web pages,
+to modify the application for a better user-experience, sales conversion, user-interface...etc. This
+data is crucial in designing next approaches for updating and iterating towards a better end product.
+
+Latsly, I should mention security. This app doesn't request anything sensitive, but if we wanted to
+perhaps facilitate transactions, protect user emails, and protect the product, it's a good idea to have
+authentication layers in place to access the application data. This will protect us from bots, malicious
+actors, and exposure to exploits that could potentially compromise the integrity of the software. Hackers
+could destroy an end product if it's not well protected, and user-data could end up exposed.
+
+- In your own words, explain the steps you should take to create a login for your Django web 
+application.
+
+- Start by configuring the user model. Django provides a default **`User`** model, but you can extend 
+it or create a custom user model to include additional fields if needed.
+- Utilize Django's built-in authentication views and URLs. These include **`LoginView`**,
+**`LogoutView`**, **`PasswordChangeView`**, and more. Configure these views in my **`urls.py`** 
+file to handle login-related functionalities.
+- Create HTML templates for the login and registration pages. These templates will include forms for
+ users to enter their credentials and submit the login request.
+- Implement Django forms to handle user input on the login page. Use Django's **`AuthenticationForm`** 
+or create a custom form if additional fields are required.
+- Set up URL routing to direct requests to the appropriate views. Define URLs in my **`urls.py`** 
+file to map to the login view, registration view, and any other authentication-related views.
+- Implement the logic for the login view. This includes handling form submissions, validating user 
+credentials, and redirecting users upon successful login.
+- Ensure that Django's authentication middleware is included in my **`MIDDLEWARE`** setting in the 
+**`settings.py`** file. This middleware handles user authentication and session management.
+- Use the **`login_required`** decorator on views that require authentication. This ensures that only 
+authenticated users can access certain parts of my application.
+- Implement the logic for the logout view. This involves clearing the user's session and redirecting 
+them to a designated page after logout.
+- Use template tags like **`{% if user.is_authenticated %}`** to conditionally display content based 
+on whether a user is logged in or not.
+- Ensure that passwords are securely hashed. Django's authentication system takes care of this by 
+default.
+
+- Look up the following three Django functions on Django’s official documentation and/or other trusted 
+sources and write a brief description of each.
+| Function - Description |
+
+| authenticate() - part of the authentication system. It verifies user credentials (such as username 
+and password) against the configured authentication backends and returns a user object if the 
+credentials are valid. This function plays a key role in the process of authenticating users within a 
+Django web application. | 
+| redirect() - a utility for creating HTTP redirect responses. It takes a URL as an argument and 
+returns a response that instructs the client's browser to navigate to the specified URL. This function 
+is commonly used in views to redirect users to another page within the same application or to an 
+external URL. redirect() simplifies the process of handling redirections and is valuable for 
+maintaining a clean and organized URL structure in web applications. |
+| include() -  function is used in URL patterns to include other URL patterns from different Python 
+modules. It allows for a modular and organized URL configuration by referencing patterns defined in 
+other files or apps. This function is commonly employed in the urlpatterns list within a Django 
+project's urls.py file to include URL patterns from various parts of the application. By doing so, 
+developers can manage and maintain a more readable and structured URL routing system, enhancing the 
+maintainability of their Django projects. |

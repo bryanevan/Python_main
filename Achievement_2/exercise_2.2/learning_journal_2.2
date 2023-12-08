@@ -1,0 +1,54 @@
+### Exercise 2.2: Django Project Set Up
+
+Learning Goals
+
+- Describe the basic structure of a Django project
+- Summarize the difference between projects and apps
+- Create a Django project and run it locally
+- Create a superuser for a Django web application
+
+Reflection Questions
+
+- Suppose you’re in an interview. The interviewer gives you their company’s website as an example, 
+asking you to convert the website and its different parts into Django terms. How would you proceed? 
+For this question, you can think about your dream company and look at their website for reference.
+
+I’ll break this down as a rough workflow:
+
+1. Understand the website’s key features, sections, and functionalities to understand how to structure 
+which apps will be needed and what could be used repeatedly - applying DRY method. 
+2. Create Django apps for each major component of the website after aforementioned abstraction is 
+exhaustive enough to begin the build.
+3. Figure out migration needs, so this will be the data structures and storage approach. Create 
+models around data types represented in the website.
+
+This is by no means an exhaustive schema but definitely something to start with.
+
+- In your own words, describe the steps you would take to deploy a basic Django application locally 
+on your system.
+1. set up virtualenv, activate virtualenv
+2. pip install django
+3. navigate to a desired directory
+    1. django-admin startproject 
+    2. rename root directory to src
+4. from src folder, execute following commands:
+    1. python [manage.py](http://manage.py) migrate - this creates database
+    2. python [manage.py](http://manage.py) startapp <name of app> - this creates any apps needed for 
+    the project
+    3. python [manage.py](http://manage.py) runserver - make sure server can launch on a local port
+    4. python [manage.py](http://manage.py) createsuperuser - follow prompts to make an admin account
+- Do some research about the Django admin site and write down how you’d use it during your web 
+application development.
+1. Database management: adding, editing, deleting records, and writing custom views or forms
+2. CMS: basic CMS management for content - super useful for site with dynamic content that needs to 
+be updated on the regular, also batch updating is an option using custom actions
+3. User Auth: allows admins to crate, modify, delete user accounts, or giving user access to certain 
+apps while restricting access to others
+4. Model Relationship Management: if we’re dealing with something like ForeignKey or ManyToManyField 
+relationships the admin site simplifies the process of associating related objects
+5. Prototyping: nice and quick prototype environment to test models and data without the need to 
+create custom views or templates
+6. CRUD ops built-in: the admin site reduces need for boilerplate code needed for basic CRUD ops
+7. Testing: admin site can test API endpoints, and has a user-interface to browse and modify data
+
+This is not an exhaustive list, but some pretty great ones that stood out to me.
